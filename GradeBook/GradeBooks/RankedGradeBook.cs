@@ -15,7 +15,7 @@ namespace GradeBook.GradeBooks
 
         public override char GetLetterGrade(double averageGrade)
         {
-            if (Students.Count <= 5) {
+            /*if (Students.Count <= 5) {
                 throw new InvalidOperationException();
             }
 
@@ -30,7 +30,7 @@ namespace GradeBook.GradeBooks
                 return 'C';
             else if (grades[(treshold * 4) - 1] <= averageGrade)
                 return 'D';
-
+                */
             return 'K';
         }
     }
