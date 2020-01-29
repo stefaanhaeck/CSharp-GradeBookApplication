@@ -107,34 +107,34 @@ namespace GradeBook.GradeBooks
             }
         }
 
-        public virtual double GetGPA(char letterGrade, StudentType studentType, bool weighted)
+        public virtual double GetGPA(char letterGrade, StudentType studentType)
         {
             switch (letterGrade)
             {
                 case 'A':
-                    if ((weighted && studentType == StudentType.Honors) || (weighted && studentType == StudentType.DualEnrolled))
+                    if ((this.IsWeighted && studentType == StudentType.Honors) || (this.IsWeighted && studentType == StudentType.DualEnrolled))
                         return 5;
                     else
                         return 4;
                 case 'B':
-                    if ((weighted && studentType == StudentType.Honors) || (weighted && studentType == StudentType.DualEnrolled))
+                    if ((this.IsWeighted && studentType == StudentType.Honors) || (this.IsWeighted && studentType == StudentType.DualEnrolled))
                         return 4;
                     else
                         return 3;
                 case 'C':
-                    if ((weighted && studentType == StudentType.Honors) || (weighted && studentType == StudentType.DualEnrolled))
+                    if ((this.IsWeighted && studentType == StudentType.Honors) || (this.IsWeighted && studentType == StudentType.DualEnrolled))
                         return 3;
                     else
                         return 2;
                 case 'D':
-                    if ((weighted && studentType == StudentType.Honors) || (weighted && studentType == StudentType.DualEnrolled))
+                    if ((this.IsWeighted && studentType == StudentType.Honors) || (this.IsWeighted && studentType == StudentType.DualEnrolled))
                         return 2;
                     else
                     {
                         return 1;
                     };
                 case 'F':
-                    if ((weighted && studentType == StudentType.Honors) || (weighted && studentType == StudentType.DualEnrolled))
+                    if ((this.IsWeighted && studentType == StudentType.Honors) || (this.IsWeighted && studentType == StudentType.DualEnrolled))
                         return 1;
                     else
                         return 0;
